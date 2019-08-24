@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 给实体类起别名 -->
+    <typeAliases >
+        <package name="com.wdhcr.ssm.po"/>
+    </typeAliases>
+<!--    使用mapper.xml映射时需要加入-->
+    <mappers>
+        <mapper resource="ItemMapper.xml"></mapper>
+    </mappers>
+
+</configuration>

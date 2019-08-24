@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wdhcr.ssm.mapper.ItemsMapper">
+    <select id="selectAll" resultType="com.wdhcr.ssm.po.Items">
+  select *from itemss
+</select>
+<!--    //根据id查询-->
+    <select id="selectItemById" parameterType="int" resultType="com.wdhcr.ssm.po.Items">
+        select * from itemss where id = #{id}
+    </select>
+<!--    添加方法-->
+    <insert id="insertItems" parameterType="com.wdhcr.ssm.po.Items">
+        insert into itemss(name,price,detail)values(#{name},#{price},#{detail})
+    </insert>
+<!--    删除方法-->
+    <delete id="delItem">
+        delete from itemss where id =#{id}
+    </delete>
+<!--    更新数据-->
+    <update id="updateItems" parameterType="com.wdhcr.ssm.po.Items">
+        update itemss set name= #{name},price =#{price},detail=#{detail} where id=#{id}
+    </update>
+</mapper>
